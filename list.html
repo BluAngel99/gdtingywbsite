@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="liststyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/ultimate_demon.jpg" class="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="index.html">HOME</a></li>
+                    <li> <a href="list.html">LIST</a></li>
+                </ul>
+            </div>
+
+       </nav>
+
+
+
+
+       <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" onclick="showSlide(0)">Tidal Wave</a>
+        <a href="javascript:void(0)" onclick="showSlide(1)">Avernus</a>
+        <a href="javascript:void(0)" onclick="showSlide(2)">Acheron</a>
+        <a href="javascript:void(0)" onclick="showSlide(3)">Abyss of Darnkess</a>
+        <a href="javascript:void(0)" onclick="showSlide(4)">Slaughterhouse</a>
+       </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776; Slides</button>
+
+
+
+            
+    <div class="slider">
+        <div class="slide slide1 active">
+            <div class="textbox">
+                <a href="#" class="hyperlink1">Tidal Wave</a>
+                <p>a du du you</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: OniLink</li>
+                        <li>Song: Shiawase VIP (NONG)</li>
+                        <li>Objects: 220,220</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Zoink</li>
+                        <li>Level length: 3m 1s</li>
+                        <li>Difficulty rating: Extreme Demon (Grandpa demon)</li>
+                        <li>Placement on demon list: #1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide2 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink2">Avernus</a>
+                <p>no one cares</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Pockewindfish and more</li>
+                        <li>Song: Dark Dragon Fire</li>
+                        <li>Objects: 163,936</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Zoink</li>
+                        <li>Level length: 1m 18s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide3 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink3">Acheron</a>
+                <p>not tartarus sequel</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Ryamu and more</li>
+                        <li>Song: Thermodynamix</li>
+                        <li>Objects: 47,965</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Zoink</li>
+                        <li>Level length: 1m 7s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide4 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink4">Abyss of Darnkess</a>
+                <p>by icy cave</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Exen and more</li>
+                        <li>Song: Death Note Dubstep</li>
+                        <li>Objects: 113,298</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Cursed</li>
+                        <li>Level length: 2m 5s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide slide5 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink5">Slaughterhouse</a>
+                <p>by icy cave</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Icedcave and more</li>
+                        <li>Song: Lost (XVA Remix)</li>
+                        <li>Objects: 147,242</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Doggie</li>
+                        <li>Level length: 1m 10s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>  
+
+    <div class="arrow left-arrow" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
+
+    <script src="script.js">  </script>
+
+ 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
