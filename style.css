@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 330;
+
+  }
+
+.header{
+
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(17, 11, 11, 0.8), rgba(37, 22, 22, 0.3)),url(images/river.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+nav{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+    height: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color:aquamarine;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+}
+
+.textbox{
+    width: 90%;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.textbox h1{
+    font-size: 70px;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.textbox p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    display: inline-block;
+    color:white ;
+    border: 1px solid white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 25px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+
+@keyframes fade {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+.btn:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    transition: 1s;
+    color: white;
+    font-weight: 400;
+}
+
+nav .fa{
+    display: none;
+
+}
+
+@media (max-width: 700px) {
+    .textbox h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: aquamarine;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+    }
+
+    nav.fa{
+        color: #fff;
+        font-size: 25px;
+        margin: 10px;
+        cursor: pointer;
+        display:block;
+
+    }
+
+
+}

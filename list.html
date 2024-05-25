@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="liststyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/ultimate_demon.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="index.html">HOME</a></li>
+                    <li> <a href="list.html">LIST</a></li>
+                </ul>
+            </div>
+
+       </nav>
+    <div class="slider">
+        <div class="slide slide1 active">
+            <div class="textbox">
+                <a href="#" class="hyperlink">Tidal Wave</a>
+                <p>a du du you</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: OniLink</li>
+                        <li>Song: Shiawase VIP (NONG)</li>
+                        <li>Objects: 220,220</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Zoink</li>
+                        <li>Level length: 3m 1s</li>
+                        <li>Difficulty rating: Extreme Demon (Grandpa demon)</li>
+                        <li>Placement on demon list: #1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide2 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink">Acheron</a>
+                <p>not tartarus sequel</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Ryamu and more</li>
+                        <li>Song: Thermodynamix</li>
+                        <li>Objects: 47,965</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Zoink</li>
+                        <li>Level length: 1m 7s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide3 hidden">
+            <div class="textbox">
+                <a href="#" class="hyperlink">Slaughterhouse</a>
+                <p>by icy cave</p>
+                <button class="rounded-button">info</button>
+                <div class="hover-box left">
+                    <h3>Build Info</h3>
+                    <ul>
+                        <li>Creator: Icedcave and more</li>
+                        <li>Song: Lost (XVA Remix)</li>
+                        <li>Objects: 147,242</li>
+                        <li>Rating: Rated</li>
+                    </ul>
+                </div>
+                <div class="hover-box right">
+                    <h3>Level Info</h3>
+                    <ul>
+                        <li>Verifier: Doggie</li>
+                        <li>Level length: 1m 10s</li>
+                        <li>Difficulty rating: Extreme Demon</li>
+                        <li>Placement on demon list: #7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="arrow left-arrow" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('hidden', i !== index);
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
