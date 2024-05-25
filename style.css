@@ -102,6 +102,17 @@ nav img{
 
 }
 
+nav img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+nav img:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
 @keyframes fade {
     from {opacity: 0%;}
     to {opacity: 100%;}
