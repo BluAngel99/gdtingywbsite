@@ -57,7 +57,7 @@
 }
 
 .slide1:hover {
-    background-image: linear-gradient(rgba(13, 13, 16, 0.8), rgba(22, 24, 37, 0.3)), url('https://i.imgur.com/9dDP7gQ.gif');
+    background-image: linear-gradient(rgba(13, 13, 16, 0.8), rgba(22, 24, 37, 0.3)), url('https://i.imgur.com/9dDP7gQ.gif') ;
 }
 
 .slide2:hover {
@@ -126,6 +126,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .hyperlink1, .hyperlink2, .hyperlink3, .hyperlink4, .hyperlink5, .hyperlink6, .hyperlink7 {
@@ -452,6 +455,49 @@ nav .logo {
 .openbtn:hover {
     background-color: #444;
 }
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.mute-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.4s;
+}
+
+.mute-button:hover {
+    color: #555;
+}
+
+
+.volume-slider {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+
+
+
 
 
 @media (max-width: 768px) {
