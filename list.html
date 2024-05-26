@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="referrer" content="no-referrer">
     <link rel="stylesheet" href="liststyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -39,7 +41,7 @@
     <div class="slider">
         <div class="slide slide1 active">
             <div class="textbox">
-                <a href="#" class="hyperlink1">Tidal Wave</a>
+                <a href="tidal.html" class="hyperlink1">Tidal Wave</a>
                 <p>a du du you</p>
                 <button class="rounded-button">info</button>
                 <div class="hover-box left">
@@ -171,6 +173,27 @@
     <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
 
     <script src="script.js">  </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = [
+                { className: 'slide1', imageUrl: 'https://i.imgur.com/9dDP7gQ.gif' },
+                { className: 'slide2', imageUrl: 'https://i.imgur.com/YHCTWJd.gif' },
+                { className: 'slide3', imageUrl: 'https://i.imgur.com/LM4sUU0.gif' },
+                { className: 'slide4', imageUrl: 'https://i.imgur.com/lji0RH3.gif' },
+                { className: 'slide5', imageUrl: 'https://i.imgur.com/FiI85Df.gif' },
+            ];
+    
+            slides.forEach(slide => {
+                const elements = document.getElementsByClassName(slide.className);
+                Array.from(elements).forEach(element => {
+                    element.style.backgroundImage = `linear-gradient(rgba(16, 13, 13, 0.8), rgba(22, 24, 37, 0.3)), url(${slide.imageUrl})`;
+                });
+            });
+        });
+    </script>
 
  
 
