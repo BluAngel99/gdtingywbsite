@@ -1,41 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sliderContent = document.querySelector('.slider-content');
-    const slides = document.querySelectorAll('.slide');
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    let currentIndex = 0;
 
-    function showSlide(index) {
-        const slideWidth = slides[0].offsetWidth;
-        sliderContent.style.transform = `translateX(-${index * slideWidth}px)`;
-    }
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-    leftArrow.addEventListener('click', function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-        showSlide(currentIndex);
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('hidden', i !== index);
+        slide.classList.toggle('active', i === index);
     });
+}
 
-    rightArrow.addEventListener('click', function() {
-        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-        showSlide(currentIndex);
-    });
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
 
-    // Optionally, add touch support for mobile devices
-    let startX;
-    sliderContent.addEventListener('touchstart', function(event) {
-        startX = event.touches[0].clientX;
-    });
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
 
-    sliderContent.addEventListener('touchmove', function(event) {
-        const touchX = event.touches[0].clientX;
-        const diffX = startX - touchX;
 
-        if (diffX > 50) {
-            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
-            showSlide(currentIndex);
-        } else if (diffX < -50) {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
-            showSlide(currentIndex);
-        }
-    });
-});
+showSlide(currentSlide);
+
+
+
