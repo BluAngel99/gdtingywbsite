@@ -331,9 +331,9 @@ p {
 
 
 .tidal-wave {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 15em;
-    font-weight: bold;
+    font-family: "Pacifico", cursive;
+    font-size: 11.9em;
+    font-weight: 400;
     background: linear-gradient(135deg, #00c3ff, #ffff1c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -514,9 +514,9 @@ nav .logo {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #ffffff; /* Black thumb to contrast with the white slider */
+    background: #ffffff; 
     cursor: pointer;
-    border-radius: 50%; /* Make the thumb rounded */
+    border-radius: 50%; 
 }
 
 .volume-slider-container input[type="range"]::-moz-range-thumb {
@@ -536,28 +536,14 @@ nav .logo {
     width: 700px;
     height: 700px;
     z-index: 9;
-    border-radius: 50%; /* Makes the canvas circular */
-    overflow: hidden;   /* Hides overflow to avoid cutoffs */
+    border-radius: 50%;
+    overflow: hidden;   
 
 }
 
 .pulsing-image {
     animation: pulse 0.4s infinite;
 }
-
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 
 @keyframes pulse {
